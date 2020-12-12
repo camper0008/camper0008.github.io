@@ -20,20 +20,30 @@
         </head>
     </head>
     <body>
-        This page is a work in progress.
-        <br>
-        In the meantime, click <text onclick="window.location = './netto/template/index.html'">here</text> to check out ./netto/index.html
-        <br>
-         ____         
-        /  / \         .
-       /  /   \          _/\ .
-      /  /  /\ \      . /  /   .
-   Î-/Î-/  /  \ \-Î     \_/ .
-____________________    _.x._
-RdznNNgcptjaicMr1oZ2\___________________
-riOHa6jUeSrMBNVRUabmjeEinZHNSBWCftitXCN6
-gq3Mmj2zKpx1g6gSaA6NmUbWOelr51V01TGNLecL
-   sLrxqbYJSIYK8ONhCm6j
+        This page is a work in progress.<br>
+        In the meantime, click <text dest="./netto/template/index.html">here</text> to check out the ./netto/ project<br>
 
+
+        <pre>
+
+                  ____         
+                 /  / \         .
+                /  /   \          _/\ .
+               /  /  /\ \      . /  /   .
+            Î-/Î-/  /  \ \-Î     \_/ .
+                                _.x._
+        #####################
+        ###################################
+        </pre>
     </body>
+    <script>
+        var text = document.getElementsByTagName("text")
+        for (var i = 0; i < text.length; i++) {
+            var n = text[i].dest
+            console.log(n)
+            text[i].onclick = function() {
+                window.location = n
+            }
+        }
+    </script>
 </html>
