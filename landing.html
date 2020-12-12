@@ -3,10 +3,14 @@
     <head>
         <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
         <link rel="stylesheet" href="inherit.css">
+        <link rel="stylesheet" href="landing.css">
+        <script src="sizeimages.js"></script>
     </head>
     <body>
-        <div style="height:100vh; width:100vw; background-image: URL(background.jpg); background-repeat: no-repeat; background-size: cover; background-position:center;">
-            <div style="background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0));height:30vh"></div>
+        <div class = "resize-image" style="z-index: -1; height:100vh; width:100vw; background-image: URL(background-full.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+            <whatsnew>what's new?</whatsnew>
+            <offers>se vores <text style="text-decoration: underline;">tilbud</text></offers>
         </div>
+        <title>Website Demo</title>
     </body>
 </html>
