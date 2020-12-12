@@ -39,8 +39,7 @@
     <script>
         var text = document.getElementsByTagName("text")
         for (var i = 0; i < text.length; i++) {
-            var n = text[i].dest
-            console.log(n)
+            var n = text[i].getAttribute("dest")
             text[i].onclick = function() {
                 window.location = n
             }
