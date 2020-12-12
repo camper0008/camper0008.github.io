@@ -27,20 +27,20 @@
         <pre>
 
                   ____         
-                 /  / \         .
-                /  /   \          _/\ .
-               /  /  /\ \      . /  /   .
-            Î-/Î-/  /  \ \-Î     \_/ .
-                                _.x._
-        #####################
-        ###################################
+                 /  / \             .
+                /  /   \              _/\ .
+               /  /  /\ \          . /  /   .
+            Î-/Î-/  /  \ \-Î         \_/ .
+                                    _.x._
+        269625446597606820754735
+        4453338071219114180493935921022006305
+                                7548920485720
         </pre>
     </body>
     <script>
         var text = document.getElementsByTagName("text")
         for (var i = 0; i < text.length; i++) {
-            var n = text[i].dest
-            console.log(n)
+            var n = text[i].getAttribute("dest")
             text[i].onclick = function() {
                 window.location = n
             }
