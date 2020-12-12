@@ -6,6 +6,8 @@ var images;
 domContentLoaded = function() {
     images = document.getElementsByClassName("resize-image")
     windowResize()
+
+    document.getElementsByTagName("offers")[0].onclick = function() {window.location = "http://www.netto.dk/tilbudsavis/#"}
 }
 
 windowResize = function() {
@@ -16,12 +18,14 @@ windowResize = function() {
             
             images[i].style.backgroundImage = 
             bgStr.slice(0, bgStr.lastIndexOf("-") + 1) + current + bgStr.slice(bgStr.lastIndexOf("."));
-            console.log("?")
+            console.log(images.length)
+            
+            document.getElementsByTagName("disclaimer").innerHtml = current
         }
         last = current;
     }
 }
 
 // # add event listeners
-document.readyState != "loading" && domContentLoaded() || window.addEventListener("DOMContentLoaded", domContentLoaded)
+document.readyState == "load" && domContentLoaded() || window.addEventListener("load", domContentLoaded)
 window.addEventListener("resize", windowResize)

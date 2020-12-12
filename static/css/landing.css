@@ -8,7 +8,7 @@ whatsnew {
     max-height: 150px;
     top:25vh;
 
-    color: black;
+    color: #000;
     font-size: min(8vmax, 125px); 
     font-weight: 900;
     text-align:center;
@@ -16,7 +16,8 @@ whatsnew {
         -1px 1px #fff,
         1px -1px #fff,
         1px 1px #fff,
-        1vmax 1.25vmax white;
+        1vmax 1.25vmax #fff;
+    pointer-events: none;
 }
 offers {
     cursor: pointer;
@@ -37,4 +38,34 @@ offers {
     font-weight: 500;
     text-align: center;
     vertical-align: middle;
+}
+text {
+    text-decoration: underline dotted;
+}
+
+offers:hover > text {
+    text-decoration: underline solid;
+}
+offers::selection {
+    text-decoration: overline;
+}
+
+disclaimer {
+    pointer-events: none;
+    color: white; 
+    text-shadow:-2px -2px #000, 
+        -2px 2px #000, 
+        2px -2px #000, 
+        2px 2px #000,
+        0px 3px #000;
+}
+
+.resize-image {
+    z-index: -1; 
+    height:100vh; 
+    width:100vw; 
+    background-image: URL(../background-full.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
 }
