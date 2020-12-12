@@ -5,24 +5,33 @@ whatsnew {
     position: absolute;
     width:100vw; 
     height:9.25vmax;
+    max-height: 150px;
     top:25vh;
 
-    font-size: 8vmax; 
+    color: black;
+    font-size: min(8vmax, 125px); 
     font-weight: 900;
     text-align:center;
-    text-shadow: 1vmax 1.25vmax white;
+    text-shadow: -1px -1px #fff,
+        -1px 1px #fff,
+        1px -1px #fff,
+        1px 1px #fff,
+        1vmax 1.25vmax white;
 }
 offers {
+    cursor: pointer;
+
     position: absolute;
     width: fit-content;
     height: fit-content;
+    max-height: 64px;
     left: 0;
     right: 0;
     top: calc(25vh + 9.25vmax + 4vmax);
     margin: auto;
 
-    background-color: white;
-    border:10px solid white;
+    background-color: #FAD85B;
+    border:10px solid #FAD85B;
 
     font-size: 2.5vmax;
     font-weight: 500;
