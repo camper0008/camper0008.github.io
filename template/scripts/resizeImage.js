@@ -14,13 +14,8 @@ windowResize = function() {
     var current = (window.innerWidth/window.innerHeight < 1) && "rect" || "full"
     if (current != last) {
         for (var i = 0; i < images.length; i++) {
-            var bgStr = String(images[i].style.backgroundImage)
-            
-            images[i].style.backgroundImage = 
-            bgStr.slice(0, bgStr.lastIndexOf("-") + 1) + current + bgStr.slice(bgStr.lastIndexOf("."));
-            console.log(images.length)
-            
-            document.getElementsByTagName("disclaimer").innerHtml = current
+            var bgStr = String(images[i].style.backgroundImage)            
+            images[i].style.backgroundImage = bgStr.slice(0, bgStr.lastIndexOf("-") + 1) + current + bgStr.slice(bgStr.lastIndexOf("."));
         }
         last = current;
     }

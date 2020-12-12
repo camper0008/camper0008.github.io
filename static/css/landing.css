@@ -64,7 +64,6 @@ disclaimer {
     z-index: -1; 
     height:100vh; 
     width:100vw; 
-    background-image: URL(../background-full.jpg); 
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center;
