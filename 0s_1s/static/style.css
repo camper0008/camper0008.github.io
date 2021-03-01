@@ -1,8 +1,10 @@
-*::selection {
-	position: inherit;
+::selection {
+	background-color: black;
+	color: white;
 }
+
 * {
-	font-family: monospace;
+    font-family: monospace;
 	cursor: default;
 }
 
@@ -16,6 +18,9 @@ pre.game {
 	margin: 0px;
 	font-size: 8vh;
 	text-align: center;
+	line-height: 1.125;
+
+	user-select: none;
 }
 
 pre.game>button {
@@ -49,11 +54,6 @@ t>input {
 	font: inherit;
 	width: 5vw;
 	cursor: auto;
-}
-
-t>input::selection {
-	background-color: black;
-	color: white;
 }
 
 button {

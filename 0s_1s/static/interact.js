@@ -1,21 +1,21 @@
-const blankBoard = `┏━━━┳━━━┳━━━┓
-┃ # ┃ # ┃ # ┃
-┣━━━╋━━━╋━━━┫
-┃ # ┃ # ┃ # ┃
-┣━━━╋━━━╋━━━┫
-┃ # ┃ # ┃ # ┃
-┗━━━┻━━━┻━━━┛`
+const blankBoard = `┌───┬───┬───┐
+│ # │ # │ # │
+├───┼───┼───┤
+│ # │ # │ # │
+├───┼───┼───┤
+│ # │ # │ # │
+└───┴───┴───┘`
 
 const get = window.get
 
-var display = () => {
+let display = () => {
     $('#player').val($('#player').val() ? $('#player').val() : '0');    
 
-    var data = get('getInfo')
-    var newString = '';
-    var current = 0;
-    for (var i = 0; i < blankBoard.length; i++) {
-        var char = blankBoard.slice(i, i + 1)
+    let data = get('getInfo')
+    let newString = '';
+    let current = 0;
+    for (let i = 0; i < blankBoard.length; i++) {
+        let char = blankBoard.slice(i, i + 1)
         if (char == '#') {
             newString += `<button index='${current}' taken='${data.board[current]}'>${data.board[current]}</button>`
             current++;
@@ -44,8 +44,6 @@ var display = () => {
     };
 }
 display();
-$('#refresh').click(display);
-setInterval(display, 2500);
 
 $('#reset').click( () => {
     get({reset: true});

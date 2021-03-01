@@ -1,6 +1,6 @@
 //modified from express.js app
 
-var game = {
+let game = {
     currentPlayer: 0,
     board: [
         '#','#','#',
