@@ -6,18 +6,21 @@
             <style>
                 body {
                     font-family: "Roboto Mono", monospace;
+                    background: #000;
+                    color: #fff;
                 }
-                text {
+                a {
+                    color: #fff;
                     text-decoration: underline dotted;
                     border: none;
                     outline: none;
                 }
-                text:hover {
+                a:hover {
                     text-decoration: underline solid;
                 }
                 ::selection {
-                    background-color: #000;
-                    color: white;
+                    background-color: #fff;
+                    color: #000;
                 }
                 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
             </style>
@@ -25,7 +28,7 @@
     </head>
     <body>
         This page is a work in progress.<br>
-        In the meantime, click <text dest="./0s_1s/template/index.html">here</text> to play 0s and 1s.<br>
+        In the meantime, click <a href="/0s_1s/template/index.html" target="_blank">here</a> to play 0s and 1s.<br>
 
 
         <pre>
@@ -41,13 +44,4 @@
                                 7548920485720
         </pre>
     </body>
-    <script>
-        var text = document.getElementsByTagName("text")
-        for (var i = 0; i < text.length; i++) {
-            var n = text[i].getAttribute("dest")
-            text[i].onclick = function() {
-                window.location = n
-            }
-        }
-    </script>
 </html>
