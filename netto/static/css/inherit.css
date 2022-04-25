@@ -1,7 +1,0 @@
-/* standards that should go for all webpages incase i wish to add more directories */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900');
-
-html * {
-    margin: 0;
-    font-family: "Roboto", sans-serif
-}
